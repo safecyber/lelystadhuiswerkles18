@@ -1,0 +1,96 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header met achtergrondafbeelding */
+header {
+    background-image: url('lelystad.jpg'); /* Voeg hier je afbeelding van Lelystad toe */
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+}
+
+header h1 {
+    font-size: 2em;
+    margin: 0;
+}
+
+/* Hoofdgedeelte (mobile-first, alles in 1 kolom) */
+main {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 100%; /* Op mobiele apparaten neemt de inhoud de volledige breedte */
+}
+
+/* Content-secties */
+.left-content, .right-content {
+    margin-bottom: 20px;
+}
+
+/* Stijl voor de artikelen in de rechterkolom */
+.article {
+    background-color: #c0a8c5;
+    padding: 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+}
+
+.article h2 {
+    margin-bottom: 15px; /* Ruimte tussen de titel en tekst */
+}
+
+.article p {
+    margin-bottom: 15px; /* Ruimte onder de tekst */
+}
+
+.article img {
+    max-width: 100%; /* Afbeeldingen schaalt goed op mobiele apparaten */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #4e5257;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media query voor grotere schermen (tablet en desktop) */
+@media (min-width: 768px) {
+    main {
+        display: flex; /* Flexbox voor 2 kolommen */
+        justify-content: space-between;
+        max-width: 1200px; /* Max-breedte voor grotere schermen */
+    }
+
+    .left-content {
+        width: 30%; /* 30% voor de linker content */
+    }
+
+    .right-content {
+        width: 65%; /* 65% voor de rechter content */
+    }
+
+    .article {
+        display: flex;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .article img {
+        max-width: 300px; /* Afbeelding krijgt een vaste breedte op grotere schermen */
+        margin-left: 20px;
+    }
+
+    .article p {
+        margin-left: 20px; /* Tekst dichter bij de afbeelding op grotere schermen */
+    }
+}
